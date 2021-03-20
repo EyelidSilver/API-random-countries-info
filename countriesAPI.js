@@ -32,7 +32,7 @@ const html = `<div class="name"> ${data[randomNumber].name} </div>
 <span class="capital"> Capital: ${data[randomNumber].capital} </span>
 <span class="region"> Region: ${data[randomNumber].region} </span>
 <span class="population"> Population: ${data[randomNumber].population} </span>
-<span class="languages"> Languages: ${data[randomNumber].languages[0].name}</span>
+<span class="languages"> Language: ${data[randomNumber].languages[0].name}</span>
 </div> `
     countries.innerHTML = html
 };
