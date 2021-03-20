@@ -6,10 +6,8 @@ const apiData = {
 }
 
 const {url, region} = apiData
-
 const apiURL = `${apiData.url}${apiData.type2}`
 const apiURL2 = `${apiData.url}${apiData.type}/${apiData.region}`
-
 
 fetch(apiURL)
 .then( (data) => data.json())
@@ -23,12 +21,8 @@ fetch(apiURL2)
 .then( (countries) => generateHTMLRandomEUcountries(countries))
 
 
-
-
 const generateHTMLRandomEUcountries = (data) => {
-console.log(data)
-
-
+// console.log(data)
 const addEUcountriesToDOM = () => {
 const randomNumber = Math.floor(Math.random() * (data.length));
 
@@ -42,20 +36,15 @@ const html = `<div class="name"> ${data[randomNumber].name} </div>
 </div> `
     countries.innerHTML = html
 };
-
 
 const countries = document.querySelector('.countries')
 const randomEUcountriesBtn = document.getElementById('randomEUcountriesBtn')
-
 randomEUcountriesBtn.addEventListener('click', addEUcountriesToDOM) 
-
 }
 
 
-
 const generateHTMLRandomAllCountries = (data) => {
-console.log(data)
-
+// console.log(data)
 
 const addEUcountriesToDOM = () => {
 const randomNumber = Math.floor(Math.random() * (data.length));
@@ -70,13 +59,11 @@ const html = `<div class="name"> ${data[randomNumber].name} </div>
 </div> `
     countries.innerHTML = html
 };
-
 
 const countries = document.querySelector('.countries')
 const randomAllcountriesBtn = document.getElementById('randomAllcountriesBtn')
 
 randomAllcountriesBtn.addEventListener('click', addEUcountriesToDOM) 
-
 }
 
 
